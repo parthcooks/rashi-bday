@@ -280,8 +280,9 @@ body {
   }
 
   .six .hat {
-    width: 50px;
+    width: 45px;
     top: -20px;
+    right: 25%
   }
 
   .wish-hbd {

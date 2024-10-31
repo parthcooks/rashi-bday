@@ -24,6 +24,15 @@ const fetchData = () => {
     });
 };
 
+function copyCode() {
+    const code = document.getElementById('redeem-code-text').innerText;
+    navigator.clipboard.writeText(code).then(() => {
+        alert('Redeem code copied to clipboard!');
+    }).catch(err => {
+        console.error('Could not copy text: ', err);
+    });
+}
+
 // Animation Timeline
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
@@ -294,14 +303,7 @@ const animationTimeline = () => {
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
-function copyCode() {
-    const code = document.getElementById('redeem-code-text').innerText;
-    navigator.clipboard.writeText(code).then(() => {
-        alert('Redeem code copied to clipboard!');
-    }).catch(err => {
-        console.error('Could not copy text: ', err);
-    });
-}
+
   // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {

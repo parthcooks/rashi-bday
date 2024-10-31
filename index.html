@@ -123,6 +123,26 @@
       <p data-node-name="outroText">Okay, now come back and tell me if you liked it.</p>
       <p id="replay" data-node-name="replayText">Or click, if you want to watch it again.</p>
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
+    <div class="gift-section" style="display: none;">
+        <div class="gift-icon">
+            <img src="img/gift-icon.png" alt="Click for your gift!" onclick="showNote()" />
+        </div>
+        
+        <div class="gift-note" id="giftNote" style="display: none;">
+            <div class="note-content">
+                <h3>Dear Rashi ❤️</h3>
+                <p class="message">
+                    [Your heartfelt message here]
+                </p>
+                <div class="redeem-section">
+                    <p>Here's a special gift for you!</p>
+                    <div class="code-container">
+                        <input type="text" id="redeemCode" value="RASHI2024" readonly>
+                        <button onclick="copyCode()">Copy Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </body>

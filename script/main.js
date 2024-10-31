@@ -24,6 +24,39 @@ const fetchData = () => {
     });
 };
 
+// Show gift icon after animations
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        document.querySelector('.gift-section').style.display = 'block';
+    }, 7000); // Adjust timing as needed
+});
+
+function showNote() {
+    document.getElementById('giftNote').style.display = 'block';
+}
+
+function copyCode() {
+    const codeElement = document.getElementById('redeemCode');
+    codeElement.select();
+    document.execCommand('copy');
+    
+    // Show feedback
+    const button = event.target;
+    const originalText = button.innerText;
+    button.innerText = 'Copied!';
+    setTimeout(() => {
+        button.innerText = originalText;
+    }, 2000);
+}
+
+// Close note when clicking outside
+window.onclick = function(event) {
+    const note = document.getElementById('giftNote');
+    if (event.target == note) {
+        note.style.display = 'none';
+    }
+}
+
 
 // Animation Timeline
 const animationTimeline = () => {

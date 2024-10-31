@@ -126,7 +126,7 @@ body {
   position: absolute;
   width: 55px;
   top: -35px;
-  left: 45.5%;
+  right: 30%;
   /* transform: scale(0.1); */
 }
 
